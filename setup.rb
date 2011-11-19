@@ -16,9 +16,8 @@ if FileTest.exists?('input.txt')
           puts "Fetched: #{ company_url }"
           output_file.puts company_url
         rescue
-          puts "***** Invalid URL *****"
-          output_file.puts "***** A Company URL failed to fetched. Recheck your Inc profile URL *****"
-          exit
+          puts "<--- Either the URL isn't correct or unavailable --->"
+          output_file.puts "N/A"
         end
       end
     end
